@@ -6,10 +6,9 @@
 ### 구성
   - 프로퍼티(property)
   - 메소드(method)
-  • 메소드(method)
-  • 컬렉션(collection)
-  • 이벤트 리스너(event listener)
-  • CSS3 스타일
+  - 컬렉션(collection)
+  - 이벤트 리스너(event listener)
+  - CSS3 스타일
 ## Randering
   과정
   
