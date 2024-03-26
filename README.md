@@ -3,7 +3,7 @@
   Document Object Model
 
   HTML 태그가 출력된 모양이나 콘텐츠를 제어하기 위해 웹 페이지에 작성된 HTML 태그 당 객체(DOM 객체) 생성
-### 구성
+##### 구성
   - 프로퍼티(property)
   - 메소드(method)
   - 컬렉션(collection)
