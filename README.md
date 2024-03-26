@@ -9,8 +9,9 @@
   - 컬렉션(collection)
   - 이벤트 리스너(event listener)
   - CSS3 스타일
+  ![landering](https://github.com/jcy010905/React/assets/155941775/73cfabec-9622-42c6-a87c-cb80b79b2ccd)
 
--------------
+***
 ## Randering
   과정
   
@@ -24,6 +25,6 @@
   
   - 개별 노드를 화면에 그린다.
   
--------------
+***
 # 0322
 ## React
