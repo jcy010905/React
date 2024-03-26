@@ -19,7 +19,7 @@
   - 렌더링 트리에서 각 노드의 크기와 위치를 계산한다.
   - 개별 노드를 화면에 그린다.
 
-![landering](https://github.com/jcy010905/React/assets/155941775/73cfabec-9622-42c6-a87c-cb80b79b2ccd)
+![alt text](0315/images/Landering.png)
 
 ## SPA vs MPA
  SPA(Single Page Application)
