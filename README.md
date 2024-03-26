@@ -2,7 +2,7 @@
 ## Randering
   과정
   
-  -HTML을 파싱하여 DOM 트리를 만든다.
+  *HTML을 파싱하여 DOM 트리를 만든다.
   
   -CSS를 파싱하여 CSSOM 트리를 만든다.
   
