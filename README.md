@@ -12,16 +12,11 @@
   - CSS3 스타일
 
 ## Randering
-  과정
-  
-  - HTML을 파싱하여 DOM 트리를 만든다.
-  
+#### 과정
+  - HTML을 파싱하여 DOM 트리를 만든다. 
   - CSS를 파싱하여 CSSOM 트리를 만든다.
-  
   - DOM 과 CSSOM 을 결합하여 렌더링 트리를 만든다.
-  
   - 렌더링 트리에서 각 노드의 크기와 위치를 계산한다.
-  
   - 개별 노드를 화면에 그린다.
 
 ![landering](https://github.com/jcy010905/React/assets/155941775/73cfabec-9622-42c6-a87c-cb80b79b2ccd)
