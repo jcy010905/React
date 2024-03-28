@@ -16,5 +16,5 @@
   - HTML 확장을 위한 JSX 구문
   - React Hook
 #### Virtual DOM
-  ![alt text](<Virtual DOM.png>)
+  ![alt text](<images/Virtual DOM.png>)
   뷰(HTML)에 변화가 있을 때, 구 가상돔과 새 가상돔을 비교하여 변경된 내용만 DOM에 적용한다. 이를 통해 브라우저 내에서 발생하는 렌더링 과정을 줄이면서 성능이 개선되는 것 이다.
