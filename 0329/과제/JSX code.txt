@@ -1,0 +1,34 @@
+import React from 'react';
+import "./App.css";
+
+const name = "정찬용";
+const age = "22살";
+const country = "대한민국";
+const adress = "부산 남구 용소로21번길 101";
+const education = "저는 현재 경성대학교 3학년입니다.";
+const major = "저의 전공은 소프트웨어학과입니다.";
+const goal = "저의 이번 학기 목표는 지각, 결석하지 않기와 꾸준히 운동하며 성실성을 기르는 것입니다.";
+
+function App() {
+    return (
+        <>
+                <div className="navbar">
+            <h1>자기 소개</h1>
+        </div>
+        <div className="container">
+            <h4>이름: {name}</h4>
+            <h4>나이: {age}</h4>
+            <h4>국적: {country}</h4>
+            <h4>거주지: {adress}</h4>
+            <h4>학력</h4>
+            <p>{education}</p>
+            <h4>전공</h4>
+            <p>{major}</p>
+            <h4>목표</h4>
+            <p>{goal}</p>
+        </div>
+        </>
+    );
+}
+
+export default App;
