@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기 소개</title>
+    <link rel="stylesheet" href="introduce.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>자기 소개</h1>
+    </div>
+    <div class="container" id="appContainer"></div>
+
+    <script>
+        const name = "정찬용";
+        const age = "22살";
+        const country = "대한민국";
+        const adress = "부산 남구 용소로21번길 101";
+        const education = "저는 현재 경성대학교 3학년입니다.";
+        const major = "저의 전공은 소프트웨어학과입니다.";
+        const goal = "저의 이번 학기 목표는 지각, 결석하지 않기와 꾸준히 운동하며 성실성을 기르는 것입니다.";
+
+        const appContainer = document.getElementById('appContainer');
+
+        const div = document.createElement('div');
+        div.className = 'container';
+
+        const h4Name = document.createElement('h4');
+        h4Name.textContent = `이름: ${name}`;
+        div.appendChild(h4Name);
+
+        const h4Age = document.createElement('h4');
+        h4Age.textContent = `나이: ${age}`;
+        div.appendChild(h4Age);
+
+        const h4Country = document.createElement('h4');
+        h4Country.textContent = `국적: ${country}`;
+        div.appendChild(h4Country);
+
+        const h4Adress = document.createElement('h4');
+        h4Adress.textContent = `거주지: ${adress}`;
+        div.appendChild(h4Adress);
+
+        const h4Education = document.createElement('h4');
+        h4Education.textContent = '학력';
+        div.appendChild(h4Education);
+
+        const pEducation = document.createElement('p');
+        pEducation.textContent = `${education}`;
+        div.appendChild(pEducation);
+
+        const h4Major = document.createElement('h4');
+        h4Major.textContent = '전공';
+        div.appendChild(h4Major);
+
+        const pMajor = document.createElement('p');
+        pMajor.textContent = `${major}`;
+        div.appendChild(pMajor);
+
+        const h4Goal = document.createElement('h4');
+        h4Goal.textContent = '목표';
+        div.appendChild(h4Goal);
+
+        const pGoal = document.createElement('p');
+        pGoal.textContent = `${goal}`;
+        div.appendChild(pGoal);
+
+        appContainer.appendChild(div);
+    </script>
+</body>
+</html>
