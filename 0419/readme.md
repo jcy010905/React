@@ -21,3 +21,85 @@
     - const [state, setState] = useState(초기값)
     - setState로 값 변경
     - state 사용
+## 실습
+#### Counter
+```
+export default function Counter() {
+    const [count, setCount] = useState(0);
+    function handleClick() {
+    setCount(count + 1);
+    }
+    return (
+    <button onClick={handleClick}>
+    You pressed me {count} times
+    </button>
+    );
+}
+```
+![alt text](images/Counter.png)
+#### Checkbox
+```
+export default function MyCheckbox() {
+    const [liked, setLiked] = useState(true);
+    function handleChange(e) {
+        setLiked(e.target.checked);
+    }
+    return (
+        <>
+        <label>
+            <input type="checkbox" checked={liked} onChange={handleChange} />I liked
+            this
+        </label>
+        <p>You {liked ? "liked" : "did not like"} this.</p>
+        </>
+    );
+}
+```
+![alt text](<images/not check.png>)|![alt text](images/check.png)
+---|---
+#### Form
+```
+export default function Counter() {
+    const [count, setCount] = useState(0);
+    function handleClick() {
+    setCount(count + 1);
+    }
+    return (
+    <button onClick={handleClick}>
+    You pressed me {count} times
+    </button>
+    );
+}
+```
+![alt text](images/Form.png)
+#### Counter2
+```
+export default function Counter() {
+    const [age, setAge] = useState(42);
+    function increment() {
+        setAge((a) => a + 1);
+    }
+    return (
+        <>
+        <h1>Your age: {age}</h1>
+        <button
+            onClick={() => {
+            increment();
+            increment();
+            increment();
+            }}
+        >
+            +3
+        </button>
+        <button
+            onClick={() => {
+            increment();
+            }}
+        >
+            +1
+        </button>
+        </>
+    );
+}
+```
+![alt text](images/Counter2.png)
