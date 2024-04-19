@@ -77,7 +77,197 @@ function App() {
 
 ```
 ![alt text](images/삼항연산자.png)
-#### 
+#### JSX 스타일링
 ```
+function App() {
+  const style = {
+    backgroundColor: 'green',
+    fontSize: '12px'
+  }
+  return (
+    <div style={style}>Hello, GodDaeHee!</div>
+  );
+}
+```
+![alt text](images/스타일링.png)
+#### 간단한 React 컴포넌트 예
+```
+import React from 'react';
 
+function App() {
+  const name = 'John Doe';
+  const items = ['Apple', 'Banana', 'Cherry'];
+
+  return (
+    <div className="App">
+      <h1>Hello, {name}!</h1>
+      <p className="intro">This is an introduction paragraph.</p>
+
+      <ul>
+        {items.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
+
+      <button onClick={() => { alert('Button is clicked!'); }}>
+        Click me
+      </button>
+
+      <input type="text" placeholder="Enter some text" />
+
+      <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="placeholder" />
+    </div>
+  );
+}
+
+export default App;
 ```
+![alt text](<images/간단한 컴포넌트.png>)
+#### book
+Book.js
+```
+import React from "react";
+
+function Book(props){
+    return (
+        <div>
+            <h1>{`이 책의 이름은 ${props.name}입니다.`}</h1>
+            <h2>{`이 책의 총 ${props.numberOfpage}페이지로 이뤄져 있습니다.`}</h2>
+        </div>
+    );
+}
+export default Book;
+```
+BookLibrary.js
+```
+import React from "react";
+import Book from "./book";
+
+function BookLibrary(props){
+    return (
+        <div>
+            <Book name="처음 만난 React" numberOfpage={300} />
+            <Book name="처음 만난 JSX" numberOfpage={400} />
+            <Book name="처음 만난 Component" numberOfpage={500} />
+        </div>
+    );
+}
+export default BookLibrary;
+```
+index.js
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import BookLibrary from './jsxCode/BookLibrary';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BookLibrary />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+![alt text](images/book.png)
+#### 간단한 시계
+```
+<!DOCTYPE html>
+<html>
+<head>
+<title>new document</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<script type="text/javascript">
+<!--
+setInterval("dpTime()", 1000);
+function dpTime() {
+    var now = new Date();
+    hours = now.getHours();
+    minutes = now.getMinutes();
+    seconds = now.getSeconds();
+    if (hours > 12) {
+    hours -= 12;
+    ampm = "오후 ";
+    } else {
+    ampm = "오전 ";
+    }
+    if (hours < 10) {
+    hours = "0" + hours;
+    }
+    if (minutes < 10) {
+    minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+    seconds = "0" + seconds;
+    }
+    document.getElementById("dpTime").innerHTML =
+    ampm + hours + ":" + minutes + ":" + seconds;
+}
+//-->
+</script>
+<span id="dpTime">오후 01:44:40</span>
+<body>
+</body>
+</html>
+```
+![alt text](<images/간단한 시계.png>)
+#### 바이너리 시계
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+<style> body { font-size:32px; text-align:center; } </style>
+</head>
+<body>
+<div><div id="disp"></div></div>
+<script type="text/babel">
+// 정기적으로 화면을 변경하게 지정합니다.
+setInterval(update, 1000)
+// 정기적으로 실행되는 함수입니다.
+function update () {
+    // 현재 시간을 이진 숫자로 변환합니다. ---- (※1)
+    const now = new Date();
+    const hh = z2(now.getHours())
+    const mm = z2(now.getMinutes())
+    const ss = z2(now.getSeconds())
+    const binStr = hh + mm + ss
+    const style0 = { color: 'brown' }
+    const style1 = { color: 'red'}
+    const lines = []
+    for (let i = 0; i < binStr.length; i++) {
+        const v = parseInt(binStr.substr(i, 1))
+        const bin = "0000" + v.toString(2)
+        const bin8 = bin.substr(bin.length - 4, 4)
+        // 이진 숫자를 구성하는 리액트 객체를 lines 배열에 추가합니다. --- (※2)
+        for (let j = 0; j < bin8.length; j++) {
+            if (bin8.substr(j, 1) === '0') {
+            lines.push(<span style={style0}>○</span>)
+            } else {
+            lines.push(<span style={style1}>●</span>)
+            }
+            }
+            lines.push(<br />)
+    }
+    // DOM의 내용을 변경합니다. --- (※3)
+    const disp = document.getElementById('disp')
+    ReactDOM.render(<div>{lines}</div>, disp)
+}
+function z2 (v) {
+    v = String("00" + v)
+    return v.substr(v.length - 2, 2)
+}
+</script>
+</body>
+</html>
+```
+![alt text](<images/바이너리 시계.png>)
+
+
