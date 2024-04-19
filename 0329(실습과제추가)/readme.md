@@ -46,6 +46,7 @@ JavaScript XML
   - 시작태그를 여러줄 작성시에는, 내부에서 // 의 형식을 사용할 수 있다.
 ## 실습
 #### 자바스크립트 표현식
+
 ```
 function App() {
   const name = 'GodDaeHee';
@@ -57,8 +58,11 @@ function App() {
   );
 }
 ```
+
 ![alt text](<images/자바스크립트 표현식.png>)
+
 #### 삼항 연산자 사용
+
 ```
 function App() {
   const loginYn = 'Y';
@@ -76,7 +80,9 @@ function App() {
   }
 
 ```
+
 ![alt text](images/삼항연산자.png)
+
 #### JSX 스타일링
 ```
 function App() {
@@ -89,7 +95,9 @@ function App() {
   );
 }
 ```
+
 ![alt text](images/스타일링.png)
+
 #### 간단한 React 컴포넌트 예
 ```
 import React from 'react';
@@ -120,9 +128,12 @@ function App() {
 
 export default App;
 ```
+
 ![alt text](<images/간단한 컴포넌트.png>)
+
 #### book
 Book.js
+
 ```
 import React from "react";
 
@@ -152,7 +163,9 @@ function BookLibrary(props){
 }
 export default BookLibrary;
 ```
+
 index.js
+
 ```
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -172,7 +185,9 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 ```
+
 ![alt text](images/book.png)
+
 #### 간단한 시계
 ```
 <!DOCTYPE html>
@@ -214,7 +229,9 @@ function dpTime() {
 </body>
 </html>
 ```
+
 ![alt text](<images/간단한 시계.png>)
+
 #### 바이너리 시계
 ```
 <!DOCTYPE html>
@@ -268,6 +285,7 @@ function z2 (v) {
 </body>
 </html>
 ```
+
 ![alt text](<images/바이너리 시계.png>)
 
 
