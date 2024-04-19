@@ -66,7 +66,7 @@ export default function Counter() {
 }
 ```
 
-![alt text](iamges/비동기.png)
+![alt text](images/비동기.png)
 
 #### 해결법
 ```
@@ -92,7 +92,7 @@ export default function Counter() {
 }
 ```
 
-![alt text](iamges/해결법.png)
+![alt text](images/해결법.png)
 
 #### State
 ```
@@ -119,7 +119,7 @@ export default class App extends React.Component {
 }
 ```
 
-![alt text](iamges/state.png)
+![alt text](images/state.png)
 
 #### Counter
 ```
@@ -151,7 +151,7 @@ class Counter extends Component {
 export default Counter;
 ```
 
-![alt text](iamges/Count.png)
+![alt text](images/Count.png)
 
 #### 리엑트 이벤트 문법
 ```

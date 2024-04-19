@@ -57,7 +57,6 @@ export default function MyCheckbox() {
     );
 }
 ```
-
 ![alt text](<images/not check.png>)|![alt text](images/check.png)
 ---|---
 
