@@ -92,7 +92,6 @@ export default App;
 
 #### props
 Main.js
-
 ```
 import React from 'react'
 
@@ -108,7 +107,6 @@ export default function Main(props) {
 ```
 
 App.js
-
 ```
 import Header from './Header';
 import Main from './Main';
@@ -132,7 +130,6 @@ export default App;
 
 #### Boolean props
 Main.js
-
 ```
 import React from 'react'
 
@@ -149,7 +146,6 @@ export default function Main({color, name, maleYn}) {
 ```
 
 App.js
-
 ```
 import Header from './Header';
 import Main from './Main';
@@ -172,7 +168,6 @@ export default App;
 
 #### props.children 활용
 Wrapper.js
-
 ```
 import React from 'react';
 function Wrapper(props) {
@@ -189,7 +184,6 @@ export default Wrapper;
 ```
 
 App.js
-
 ```
 import Header from './Header';
 import Main from './Main';
@@ -238,7 +232,6 @@ export default function FPhotoText(props) {
 ```
 
 App.js
-
 ```
 import FPhotoText from './FPhotoText';
 
@@ -259,7 +252,6 @@ export default App;
 
 #### 리스트 컴포넌트
 RList.js
-
 ```
 import React, { Component } from 'react'
 
@@ -283,7 +275,6 @@ export default class RList extends Component {
 ```
 
 App.js
-
 ```
 import './App.css';
 import RList from './RList';
@@ -297,10 +288,11 @@ function App() {
 export default App;
 
 ```
+
 ![alt text](images/List.png)
+
 #### 화살표 함수
 index.js
-
 ```
 import React from "react";
 import ReactDOM from "react-dom/client";
