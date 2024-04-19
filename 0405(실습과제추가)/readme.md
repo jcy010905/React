@@ -20,6 +20,7 @@
 - 모든 부모 컴포넌트는 props를 줌으로써 몇몇의 정보를 자식 컴포넌트에게 전달할 수 있다.
 ## 실습
 Header.js
+
 ```
 import React from 'react'
 
@@ -33,7 +34,9 @@ export default function Header() {
     )
 }
 ```
+
 Footer.js
+
 ```
 import React from 'react'
 
@@ -47,8 +50,10 @@ export default function Footer() {
     )
 }
 ```
+
 #### comp
 Main.js
+
 ```
 import React from 'react'
 
@@ -62,7 +67,9 @@ export default function Main(props) {
     )
 }
 ```
+
 App.js
+
 ```
 import Header from './Header';
 import Main from './Main';
@@ -80,9 +87,12 @@ function App() {
 
 export default App;
 ```
+
 ![alt text](images/comp.png)
+
 #### props
 Main.js
+
 ```
 import React from 'react'
 
@@ -96,7 +106,9 @@ export default function Main(props) {
     )
 }
 ```
+
 App.js
+
 ```
 import Header from './Header';
 import Main from './Main';
@@ -113,10 +125,14 @@ function App() {
 }
 
 export default App;
+
 ```
+
 ![alt text](images/props.png)
+
 #### Boolean props
 Main.js
+
 ```
 import React from 'react'
 
@@ -131,7 +147,9 @@ export default function Main({color, name, maleYn}) {
     )
 }
 ```
+
 App.js
+
 ```
 import Header from './Header';
 import Main from './Main';
@@ -148,10 +166,13 @@ function App() {
 }
 
 export default App;
+
 ```
 ![alt text](images/Boolean.png)
+
 #### props.children 활용
 Wrapper.js
+
 ```
 import React from 'react';
 function Wrapper(props) {
@@ -166,7 +187,9 @@ function Wrapper(props) {
 }
 export default Wrapper;
 ```
+
 App.js
+
 ```
 import Header from './Header';
 import Main from './Main';
@@ -188,9 +211,12 @@ function App() {
 
 export default App;
 ```
+
 ![alt text](images/children.png)
+
 #### 이미지
 FPhotoText.js
+
 ```
 import React from 'react'
 
@@ -210,7 +236,9 @@ export default function FPhotoText(props) {
     )
 }
 ```
+
 App.js
+
 ```
 import FPhotoText from './FPhotoText';
 
@@ -226,9 +254,12 @@ function App() {
 
 export default App;
 ```
+
 ![alt text](images/FPhotoText.png)
+
 #### 리스트 컴포넌트
 RList.js
+
 ```
 import React, { Component } from 'react'
 
@@ -250,7 +281,9 @@ export default class RList extends Component {
     }
 }
 ```
+
 App.js
+
 ```
 import './App.css';
 import RList from './RList';
@@ -262,10 +295,12 @@ function App() {
     );
 }
 export default App;
+
 ```
 ![alt text](images/List.png)
 #### 화살표 함수
 index.js
+
 ```
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -301,9 +336,12 @@ root.render(
 );
 reportWebVitals();
 ```
+
 ![alt text](images/화살표함수.png)
+
 #### 댓글컴포넌트 만들기
 Index.js
+
 ```
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -317,7 +355,9 @@ root.render(
   </React.StrictMode>
 );
 ```
+
 Comment.js
+
 ```
 import React from "react";
 const styles = {
@@ -371,7 +411,9 @@ function Comment(props) {
 }
 export default Comment;
 ```
+
 CommentList.js
+
 ```
 import React from "react";
 import Comment from "./Comment";
@@ -400,4 +442,5 @@ const comments = [
 }
 export default CommentList;
 ```
+
 ![alt text](images/댓글.png)

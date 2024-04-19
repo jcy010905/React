@@ -36,7 +36,9 @@ export default function Counter() {
     );
 }
 ```
+
 ![alt text](images/Counter.png)
+
 #### Checkbox
 ```
 export default function MyCheckbox() {
@@ -55,8 +57,10 @@ export default function MyCheckbox() {
     );
 }
 ```
+
 ![alt text](<images/not check.png>)|![alt text](images/check.png)
 ---|---
+
 #### Form
 ```
 export default function Counter() {
@@ -71,7 +75,9 @@ export default function Counter() {
     );
 }
 ```
+
 ![alt text](images/Form.png)
+
 #### Counter2
 ```
 export default function Counter() {
@@ -102,4 +108,5 @@ export default function Counter() {
     );
 }
 ```
+
 ![alt text](images/Counter2.png)

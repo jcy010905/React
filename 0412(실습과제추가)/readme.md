@@ -65,7 +65,9 @@ export default function Counter() {
     );
 }
 ```
+
 ![alt text](iamges/비동기.png)
+
 #### 해결법
 ```
 export default function Counter() {
@@ -89,7 +91,9 @@ export default function Counter() {
     );
 }
 ```
+
 ![alt text](iamges/해결법.png)
+
 #### State
 ```
 import React from "react";
@@ -114,7 +118,9 @@ export default class App extends React.Component {
   }
 }
 ```
+
 ![alt text](iamges/state.png)
+
 #### Counter
 ```
 import React, { Component } from "react";
@@ -144,7 +150,9 @@ class Counter extends Component {
 }
 export default Counter;
 ```
+
 ![alt text](iamges/Count.png)
+
 #### 리엑트 이벤트 문법
 ```
 import React, { useState } from "react";
@@ -162,8 +170,10 @@ const Main = () => {
 };
 export default Main;
 ```
+
 ![alt text](images/홍길동.png)|![alt text](images/김길동.png)
 ---|---
+
 #### 너비,높이 증가
 ```
 import { useState } from "react";
@@ -197,7 +207,9 @@ const Area = () => {
 };
 export default Area;
 ```
+
 ![alt text](images/증가.png)
+
 #### 경고창
 ```
 <!DOCTYPE html>
@@ -236,7 +248,9 @@ export default Area;
 
 </html>
 ```
+
 ![alt text](images/경고창.png)
+
 ### 체크박스 구현
 ```
 <!DOCTYPE html>
@@ -297,8 +311,10 @@ export default Area;
 
 </html>
 ```
+
 ![alt text](images/체크1.png)|![alt text](images/체크2.png)
 ---|---
+
 #### 스톱워치 만들기
 ```
 import React, { Component } from 'react'
@@ -378,7 +394,9 @@ render () {
     }
 export default Stopwatch
 ```
+
 ![alt text](images/stopwatch.png)
+
 #### 간단한 입력 양식 만들기
 ```
 import React from "react";
@@ -413,7 +431,9 @@ export class SimpleForm extends React.Component {
     }
 }
 ```
+
 ![alt text](images/simple.png)
+
 #### 숫자만 입력받는 텍스트박스 만들기
 ```
 import React, { Component } from "react";
@@ -449,7 +469,9 @@ export default class NumberForm extends Component {
     }
 }
 ```
+
 ![alt text](images/number.png)
+
 #### 여러 개의 입력 항목을 가진 입력 양식 만들기
 ```
 import React, { Component } from "react";
@@ -523,4 +545,5 @@ export default class MultiForm extends Component {
     }
 }
 ```
+
 ![alt text](images/multi.png)
