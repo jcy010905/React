@@ -44,3 +44,40 @@ JavaScript XML
 #### 7. 주석
   - JSX 내에서 {/*…*/} 와 같은 형식을 사용 한다.
   - 시작태그를 여러줄 작성시에는, 내부에서 // 의 형식을 사용할 수 있다.
+
+#### 자바스크립트 표현식
+```
+function App() {
+  const name = 'GodDaeHee';
+  return (
+  <div>
+    <div>Hello</div>
+    <div>{name}!</div>
+  </div>
+  );
+}
+```
+![alt text](<images/자바스크립트 표현식.png>)
+#### 삼항 연산자 사용
+```
+function App() {
+  const loginYn = 'Y';
+    return (
+      <>
+        <div>
+          {loginYn === 'Y' ? (
+            <div>GodDaeHee 입니다.</div>
+          ) : (
+            <div>비회원 입니다.</div>
+          )}
+        </div>
+      </>
+    );
+  }
+
+```
+![alt text](images/삼항연산자.png)
+#### 
+```
+
+```
