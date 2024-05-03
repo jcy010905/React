@@ -294,16 +294,148 @@ export default function UseEffectTest() {
 
 #### useMemo
 ```
+import { useEffect, useState, useMemo } from "react";
+
+export default function Practice() {
+    const [number, setNumber] = useState(0);
+    const [isKorea, setIsKorea] = useState(true);
+
+    const location = useMemo(() => {
+        return { country: isKorea ? "한국" : "외국" };
+    }, [isKorea]);
+
+    useEffect(() => {
+        console.log("useEffect 호출");
+    }, [location]);
+    
+    return (
+        <div>
+        <h2>하루에 몇끼 먹어요?</h2>
+        <input
+            type="number"
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+        />
+        <hr />
+        <h2>어느 나라에 있어요?</h2>
+        {}
+        <p>나라:{location.country}</p>
+        <button onClick={() => setIsKorea(!isKorea)}>비행기 타자</button>
+        <p></p>
+        </div>
+    );
+}
 ```
 
+![alt text](images/memo.png)
+
 #### useCallback
+Light.js
 ```
+import React, { useState } from "react";
+import Light from "./Light";
+
+function SmartHome() {
+    const [masterOn, setMasterOn] = useState(false);
+    const [kitchenOn, setKitchenOn] = useState(false);
+    const [bathOn, setBathOn] = useState(false);
+    const toggleMaster = () => {
+        setMasterOn(!masterOn);
+    };
+    const toggleKitchen = () => {
+        setKitchenOn(!kitchenOn);
+    };
+    const toggleBath = () => {
+        setBathOn(!bathOn);
+    };
+    return (
+        <div>
+        <Light room="침실" on={masterOn} toggle={toggleMaster}></Light>
+        <Light room="주방" on={kitchenOn} toggle={toggleKitchen}></Light>
+        <Light room="욕실" on={bathOn} toggle={toggleBath}></Light>
+        </div>
+    );
+}
+export default SmartHome;
 ```
+SmartHome.js
+```
+import React, { useState } from "react";
+import Light from "./Light";
+
+function SmartHome() {
+    const [masterOn, setMasterOn] = useState(false);
+    const [kitchenOn, setKitchenOn] = useState(false);
+    const [bathOn, setBathOn] = useState(false);
+    const toggleMaster = () => {
+        setMasterOn(!masterOn);
+    };
+    const toggleKitchen = () => {
+        setKitchenOn(!kitchenOn);
+    };
+    const toggleBath = () => {
+        setBathOn(!bathOn);
+    };
+    return (
+        <div>
+        <Light room="침실" on={masterOn} toggle={toggleMaster}></Light>
+        <Light room="주방" on={kitchenOn} toggle={toggleKitchen}></Light>
+        <Light room="욕실" on={bathOn} toggle={toggleBath}></Light>
+        </div>
+    );
+}
+export default SmartHome;
+```
+
+![alt text](images/collback.png)
 
 #### useTransition
 ```
+import { useDeferredValue, useState } from "react";
+
+export default function Home() {
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+    const [count3, setCount3] = useState(0);
+    const [count4, setCount4] = useState(0);
+    const deferredValue = useDeferredValue(count2);
+    const onIncrease = () => {
+        setCount1(count1 + 1);
+        setCount2(count2 + 1);
+        setCount3(count3 + 1);
+        setCount4(count4 + 1);
+    };
+    console.log({ count1 });
+    console.log({ count2 });
+    console.log({ count3 });
+    console.log({ count4 });
+    console.log({ deferredValue });
+    
+    return <button onClick={onIncrease}>클릭</button>;
+    }
 ```
+
+![alt text](images/Transition.png)
 
 #### UseId
 ```
+import { useId } from "react";
+
+function PasswordField() {
+    const passwordHintId = useId();
+    return (
+        <>
+        <label>
+            Password:
+            <input type="password" aria-describedby={passwordHintId} />
+        </label>
+        <p id={passwordHintId}>
+            The password should contain at least 18 characters
+        </p>
+        </>
+    );
+}
+export default PasswordField;
 ```
+
+![alt text](images/Id.png)
