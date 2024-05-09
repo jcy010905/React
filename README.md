@@ -17,6 +17,7 @@
 - <a href="https://jcy010905.github.io/React/0329/%EA%B3%BC%EC%A0%9C/introduce.html"> 자기소개 HTML Web </a></br>
 - <a href="https://jcy010905.github.io/React/0329/%EA%B3%BC%EC%A0%9C/JavascriptVer.html"> 자기소개 JavaScript Web </a></br>
 - <a href="https://jcy010905.github.io/React/0329/%EA%B3%BC%EC%A0%9C/build/"> 자기소개 React Web </a></br>
+- <a href="https://www.figma.com/file/pvdGkAcHmBfKbovFr3qxxe/%EA%B8%B0%ED%9A%8D%EC%95%88?type=design&node-id=2%3A2&mode=design&t=PE0AyGQUOypnzqbt-1"> 학과 게시판 피그마로 기획 </a></br>
 
 #### 0405
 - <a href="https://jcy010905.github.io/React/0405(%EC%8B%A4%EC%8A%B5%EA%B3%BC%EC%A0%9C%EC%B6%94%EA%B0%80)/"> 강의 정리 및 실습 </a></br>
